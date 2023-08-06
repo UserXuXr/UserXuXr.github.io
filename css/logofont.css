@@ -1,0 +1,13 @@
+/*@font-face{
+    font-family: 'Times';
+    font-display: swap;
+    src: url("/source/font/times new roman.ttf") format("truetype");
+}
+*/
+
+@font-face {
+  font-family: 'SimSun';
+  src: local("Apple LiSung Light");
+  font-weight: normal;
+  language: zh-CN;
+}

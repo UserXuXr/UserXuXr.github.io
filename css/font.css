@@ -1,0 +1,21 @@
+/*@font-face{
+    font-family: 'Times';
+    font-display: swap;
+    src: url("/source/font/times new roman.ttf") format("truetype");
+}
+*/
+
+@font-face {
+  font-family: 'Times';
+  src: local("Times New Roman");
+  font-weight: normal;
+/*  language: en;*/
+}
+
+
+@font-face {
+  font-family: 'SimSun';
+  src: local("SimSun");
+  font-weight: normal;
+  language: zh-CN;
+}
