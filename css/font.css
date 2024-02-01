@@ -236,3 +236,7 @@
     font-display: swap;
     src: url("/source/font/times new roman.ttf") format("truetype");
 }
+
+.p {
+  text-indent: 0;
+}
