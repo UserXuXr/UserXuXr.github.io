@@ -33,154 +33,154 @@
   font-family:"Heti Hei SC Light";
   font-weight:200;
   src:local("PingFang SC Light"),local("Heiti SC Light"),"Heti Hei SC Light Fallback",local("Source Han Sans CN Light"),local("Noto Sans CJK SC Light")
-  }
+}
 
 @font-face{
   font-family:"Heti Hei TC Light";
   font-weight:200;
   src:local("PingFang TC Light"),local("Heiti TC Light"),local("Microsoft Jhenghei Light"),local("Source Han Sans HK Light"),local("Source Han Sans TW Light"),local("Noto Sans CJK TC Light")
-  }
+}
 
-  @font-face {
-    font-family: "Heti Hei JP Light";
-    font-weight: 200;
-    src: local("Source Han Sans JP Light"), local("Noto Sans CJK JP Light");
-  }
+@font-face {
+  font-family: "Heti Hei JP Light";
+  font-weight: 200;
+  src: local("Source Han Sans JP Light"), local("Noto Sans CJK JP Light");
+}
 
-  @font-face {
-    font-family: "Heti Hei KR Light";
-    font-weight: 200;
-    src: local("Source Han Sans KR Light"), local("Noto Sans CJK KR Light");
-  }
+@font-face {
+  font-family: "Heti Hei KR Light";
+  font-weight: 200;
+  src: local("Source Han Sans KR Light"), local("Noto Sans CJK KR Light");
+}
 
-  @font-face {
-    font-family: "Heti Hei SC Light Fallback";
-    font-weight: 200;
-    src: local("Microsoft YaHei"), local("Droid Sans Fallback");
-  }
+@font-face {
+  font-family: "Heti Hei SC Light Fallback";
+  font-weight: 200;
+  src: local("Microsoft YaHei"), local("Droid Sans Fallback");
+}
 
-  @font-face {
-    font-family: "Heti Hei";
-    font-weight: 600;
-    src: "Heti Hei SC Bold", "Heti Hei TC Bold", "Heti Hei JP Bold", "Heti Hei KR Bold";
-  }
+@font-face {
+  font-family: "Heti Hei";
+  font-weight: 600;
+  src: "Heti Hei SC Bold", "Heti Hei TC Bold", "Heti Hei JP Bold", "Heti Hei KR Bold";
+}
 
-  @font-face {
-    font-family: "Heti Hei SC Bold";
-    font-weight: 600;
-    src: local("PingFang SC Medium"), local("Heiti SC Medium"), "Heti Hei SC Bold Fallback", local("Source Han Sans CN Bold"), local("Noto Sans CJK SC Bold");
-  }
+@font-face {
+  font-family: "Heti Hei SC Bold";
+  font-weight: 600;
+  src: local("PingFang SC Medium"), local("Heiti SC Medium"), "Heti Hei SC Bold Fallback", local("Source Han Sans CN Bold"), local("Noto Sans CJK SC Bold");
+}
 
-  @font-face {
-    font-family: "Heti Hei TC Bold";
-    font-weight: 600;
-    src: local("PingFang TC Medium"), local("Heiti TC Medium"), local("Microsoft Jhenghei Bold"), local("Source Han Sans HK Bold"), local("Source Han Sans TW Bold"), local("Noto Sans CJK TC Bold");
-  }
+@font-face {
+  font-family: "Heti Hei TC Bold";
+  font-weight: 600;
+  src: local("PingFang TC Medium"), local("Heiti TC Medium"), local("Microsoft Jhenghei Bold"), local("Source Han Sans HK Bold"), local("Source Han Sans TW Bold"), local("Noto Sans CJK TC Bold");
+}
 
-  @font-face {
-    font-family: "Heti Hei JP Bold";
-    font-weight: 600;
-    src: local("Hiragino Sans GB W6"), local("Source Han Sans JP Bold"), local("Noto Sans CJK JP Bold");
-  }
+@font-face {
+  font-family: "Heti Hei JP Bold";
+  font-weight: 600;
+  src: local("Hiragino Sans GB W6"), local("Source Han Sans JP Bold"), local("Noto Sans CJK JP Bold");
+}
 
-  @font-face {
-    font-family: "Heti Hei KR Bold";
-    font-weight: 600;
-    src: local("Source Han Sans KR Bold"), local("Noto Sans CJK KR Bold");
-  }
+@font-face {
+  font-family: "Heti Hei KR Bold";
+  font-weight: 600;
+  src: local("Source Han Sans KR Bold"), local("Noto Sans CJK KR Bold");
+}
 
-  @font-face {
-    font-family: "Heti Hei SC Bold Fallback";
-    font-weight: 600;
-    src: local("Microsoft YaHei"), local("Droid Sans Fallback");
-  }
+@font-face {
+  font-family: "Heti Hei SC Bold Fallback";
+  font-weight: 600;
+  src: local("Microsoft YaHei"), local("Droid Sans Fallback");
+}
 
-  @font-face {
-    font-family: "Heti Hei Black";
-    font-weight: 800;
-    src: "Heti Hei SC Black", "Heti Hei TC Black", "Heti Hei JP Black", "Heti Hei KR Black";
-  }
+@font-face {
+  font-family: "Heti Hei Black";
+  font-weight: 800;
+  src: "Heti Hei SC Black", "Heti Hei TC Black", "Heti Hei JP Black", "Heti Hei KR Black";
+}
 
-  @font-face {
-    font-family: "Heti Hei SC Black";
-    font-weight: 800;
-    src:local("Lantinghei SC Heavy"),local("PingFang SC Semibold"),local("Heiti SC Medium"),"Heti Hei SC Black Fallback",local("Source Han Sans CN Heavy"),local("Noto Sans CJK SC Heavy")
-    }
+@font-face {
+  font-family: "Heti Hei SC Black";
+  font-weight: 800;
+  src:local("Lantinghei SC Heavy"),local("PingFang SC Semibold"),local("Heiti SC Medium"),"Heti Hei SC Black Fallback",local("Source Han Sans CN Heavy"),local("Noto Sans CJK SC Heavy")
+}
 
 @font-face{
   font-family:"Heti Hei TC Black";
   font-weight:800;
   src:local("Lantinghei TC Heavy"),local("PingFang TC Semibold"),local("Heiti TC Medium"),local("Microsoft Jhenghei Bold"),local("Source Han Sans HK Heavy"),local("Source Han Sans TW Heavy"),local("Noto Sans CJK TC Heavy")
-  }
+}
 
 @font-face{
   font-family:"Heti Hei JP Black";
   font-weight:800;
   src:local("Hiragino Sans GB W6"),local("Source Han Sans JP Heavy"),local("Noto Sans CJK JP Heavy")
-  }
+}
 
 @font-face{
   font-family:"Heti Hei KR Black";
   font-weight:800;
   src:local("Source Han Sans KR Heavy"),local("Noto Sans CJK KR Heavy")
-  }
+}
 
 @font-face{
   font-family:"Heti Hei SC Black Fallback";
   font-weight:800;
   src:local("Microsoft YaHei"),local("Droid Sans Fallback")
-  }
+}
 
 @font-face{
   font-family:"Heti Song";
   src:local("Songti SC Regular"),local("Songti TC Regular"),local("SimSun")
-  }
+}
 
 @font-face{
   font-family:"Heti Song";
   font-weight:200;
   src:local("Songti SC Light"),local("Songti TC Light"),"Heti Song Light Fallback"
-  }
+}
 
 @font-face{
   font-family:"Heti Song Light Fallback";
   font-weight:200;
   src:local("SimSun")
-  }
+}
 
 @font-face{
   font-family:"Heti Song";
   font-weight:600;
   src:local("Songti SC Bold"),local("Songti TC Bold"),"Heti Song Bold Fallback"
-  }
+}
 
 @font-face{
   font-family:"Heti Song Bold Fallback";
   font-weight:600;
   src:local("SimSun")
-  }
+}
 
 @font-face{
   font-family:"Heti Song Black";
   font-weight:800;src:local("Songti SC Black"),local("SimSun")
-  }
+}
 
 @font-face{
   font-family:"Heti Kai";
   src:local("Kaiti SC Regular"),local("Kaiti TC Regular"),local("STKaiti"),local("Kaiti"),local("BiauKai")
-  }
+}
 
 @font-face{
   font-family:"Heti Kai";
   font-weight:600;
   src:local("Kaiti SC Bold"),local("Kaiti TC Bold")
-  }
+}
 
 @font-face{
   font-family:"Heti Kai Bold Fallback";
   font-weight:600;
   src:local("STKaiti"),local("Kaiti") local("BiauKai")
-  }
+}
 
 @font-face{
    font-family:"Heti Kai Black";
@@ -189,15 +189,15 @@
  }
 
  .heti {
-   max-width: 42em;
-   font-size: 16px;
-   font-weight: 400;
-   -webkit-font-smoothing: subpixel-antialiased;
-   line-height: 1.5;
-   overflow-wrap: break-word;
-   word-wrap: break-word;
-   hyphens: auto;
-   letter-spacing: 0.02em;
+   max-width: 42em;                      /* 最大宽度为 42em */
+   font-size: 16px;                       /* 字体大小为 16像素 */
+   font-weight: 400;                      /* 字体粗细为普通（400） */
+   -webkit-font-smoothing: subpixel-antialiased;  /* 使用亚像素抗锯齿 */
+   line-height: 1.5;                      /* 行高为字体大小的1.5倍 */
+   overflow-wrap: break-word;             /* 溢出时自动换行 */
+   word-wrap: break-word;                 /* 单词溢出时自动换行 */
+   hyphens: auto;                         /* 自动断字 */
+   letter-spacing: 0.02em;                /* 字符间距为 0.02em */
  }
 
  .heti::before,
@@ -218,31 +218,38 @@
  .heti td > *:last-child {
    margin-block-end: 0 !important;
  }
+
+ /* 引用块 */
  .heti blockquote {
-   margin-block-start: 12px;
-   margin-block-end: 24px;
-   margin-inline-start: 32px;
-   margin-inline-end: 32px;
-   padding-block-start: 12px;
-   padding-block-end: 12px;
-   padding-inline-start: 16px;
-   padding-inline-end: 16px;
-   background-color: rgba(0, 0, 0, 0.054);
+   margin-block-start: 12px;       /* 引用块顶部的外边距为 12 像素 */
+   margin-block-end: 24px;         /* 引用块底部的外边距为 24 像素 */
+   margin-inline-start: 32px;      /* 引用块左侧的外边距为 32 像素 */
+   margin-inline-end: 32px;        /* 引用块右侧的外边距为 32 像素 */
+   padding-block-start: 12px;      /* 引用块顶部的内边距为 12 像素 */
+   padding-block-end: 12px;        /* 引用块底部的内边距为 12 像素 */
+   padding-inline-start: 16px;     /* 引用块左侧的内边距为 16 像素 */
+   padding-inline-end: 16px;       /* 引用块右侧的内边距为 16 像素 */
+   background-color: rgba(0, 0, 0, 0.054);  /* 引用块的背景颜色为黑色，透明度为 0.054 */
  }
  @media (prefers-color-scheme: dark) {
    .heti blockquote {
-     background-color: rgba(255, 255, 255, 0.054);
+     background-color: rgba(255, 255, 255, 0.054); /* 暗色主题下引用块的背景颜色为白色，透明度为 0.054 */
    }
  }
+
+ /* 图像位置 */
  .heti figure {
-   display: block;
-   text-align: center;
+   display: block;       /* 将 <figure> 元素显示为块级元素 */
+   text-align: center;   /* 设置 <figure> 元素内部文本居中对齐 */
  }
+
  .heti figure > img {
-   display: block;
-   margin-inline-start: auto;
-   margin-inline-end: auto;
+  display: block;              /* 将 <img> 元素显示为块级元素 */
+  margin-inline-start: auto;   /* 设置左侧外边距为自动，使图像水平居中 */
+  margin-inline-end: auto;     /* 设置右侧外边距为自动，使图像水平居中 */
  }
+
+/* 水平线分割 */
  .heti hr {
    width: 30%;
    height: 1px;
@@ -260,14 +267,15 @@
  }
 
  .heti p {
-   margin-block-start: 12px;
-   margin-block-end: 24px;
-   text-align: justify;
+   margin-block-start: 12px;   /* 段落顶部的外边距为 12 像素 */
+   margin-block-end: 24px;     /* 段落底部的外边距为 24 像素 */
+   text-align: justify;        /* 段落文本两端对齐 */
  }
  .heti p:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
  .heti p:not(:lang(zh)) {
-   text-align: start;
+   text-align: start;         /* 对于非中文、日文、韩文的段落，文本对齐方式为 start，即根据文本的书写方向自动调整对齐方式 */
  }
+
  .heti pre {
    margin-block-start: 12px;
    margin-block-end: 12px;
@@ -342,8 +350,26 @@
  line-height:24px;}
  .heti h6 {
  font-size:14px;line-height:24px;}
- .heti h1,.heti h2,.heti h3{letter-spacing:.05em}
- .heti h1:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),.heti h1:not(:lang(zh)),.heti h2:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),.heti h2:not(:lang(zh)),.heti h3:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),.heti h3:not(:lang(zh)){letter-spacing:0}.heti h1+h2,.heti h2+h3,.heti h3+h4,.heti h4+h5,.heti h5+h6{margin-block-start:12px}.heti ul,.heti ol,
+ .heti h1, .heti h2, .heti h3 {
+  letter-spacing: 0.05em;   /* 设置标题 h1、h2、h3 的字母间距为 0.05em */
+ }
+
+ .heti h1:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+ .heti h1:not(:lang(zh)),
+ .heti h2:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+ .heti h2:not(:lang(zh)),
+ .heti h3:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+ .heti h3:not(:lang(zh)) {
+   letter-spacing: 0;        /* 非中文、日文、韩文的 h1、h2、h3 字母间距为 0 */
+ }
+
+ .heti h1+h2,
+ .heti h2+h3,
+ .heti h3+h4,
+ .heti h4+h5,
+ .heti h5+h6 {
+  margin-block-start: 12px; /* 设置相邻标题之间的顶部外边距为 12px */
+ }
 
  .heti ul,
  .heti ol,
@@ -399,75 +425,7 @@
      border-color: #404040;
    }
  }
- .heti th,
- .heti td {
-   padding-block-start: 6px;
-   padding-block-end: 6px;
-   padding-inline-start: 8px;
-   padding-inline-end: 8px;
-   border-width: 1px;
-   border-style: solid;
-   border-color: #ccc;
- }
- @media (prefers-color-scheme: dark) {
-   .heti th,
-   .heti td {
-     border-color: #404040;
-   }
- }
 
- .heti dl {
-   margin-block-start: 12px;
-   margin-block-end: 24px;
- }
- .heti ul,
- .heti ol {
-   padding-inline-start: 32px;
- }
- .heti ul ul,
- .heti ul ol,
- .heti ol ul,
- .heti ol ol {
-   margin-block-start: 0;
-   margin-block-end: 0;
- }
- .heti ul {
-   list-style-type: disc;
- }
- .heti ol {
-   list-style-type: decimal;
- }
- .heti ul ul,
- .heti ol ul {
-   list-style-type: circle;
- }
- .heti ul ul ul,
- .heti ul ol ul,
- .heti ol ul ul,
- .heti ol ol ul {
-   list-style-type: square;
- }
- .heti li {
-   list-style-type: unset;
- }
- .heti table {
-   box-sizing: border-box;
-   table-layout: fixed;
-   margin-block-start: 12px;
-   margin-block-end: 24px;
-   margin-inline-start: auto;
-   margin-inline-end: auto;
-   border-collapse: collapse;
-   border-width: 1px;
-   border-style: solid;
-   border-color: #ccc;
-   word-break: break-word;
- }
- @media (prefers-color-scheme: dark) {
-   .heti table {
-     border-color: #404040;
-   }
- }
  .heti th,
  .heti td {
    padding-block-start: 6px;
