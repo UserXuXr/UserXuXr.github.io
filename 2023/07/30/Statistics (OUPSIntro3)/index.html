@@ -1,0 +1,369 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>牛津通识·统计学｜小心你的数据 | LET'S Community</title><meta name="author" content="H. J. Hsü"><meta name="copyright" content="H. J. Hsü"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="对牛津通识系列《统计学》一书的译介。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="牛津通识·统计学｜小心你的数据">
+<meta property="og:url" content="https://carlshun.github.io/2023/07/30/Statistics%20(OUPSIntro3)/index.html">
+<meta property="og:site_name" content="LET&#39;S Community">
+<meta property="og:description" content="对牛津通识系列《统计学》一书的译介。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/66cebb86d9c307b7e93eb897.jpg">
+<meta property="article:published_time" content="2023-07-30T11:30:10.000Z">
+<meta property="article:modified_time" content="2024-08-28T07:11:34.470Z">
+<meta property="article:author" content="H. J. Hsü">
+<meta property="article:tag" content="统计学">
+<meta property="article:tag" content="方法论">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/66cebb86d9c307b7e93eb897.jpg"><link rel="shortcut icon" href="/img/girl.jpg"><link rel="canonical" href="https://carlshun.github.io/2023/07/30/Statistics%20(OUPSIntro3)/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '牛津通识·统计学｜小心你的数据',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-28 15:11:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/fonts/font.css"><link rel="stylesheet" href="/css/heti.min.css"><link rel="stylesheet" href="/css/result.css"><link rel="stylesheet" href="/css/styles.css?1"><link rel="stylesheet" href="/css/icon.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic.imgdb.cn/item/66557df0d9c307b7e98bbf67.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic.imgdb.cn/item/66cebb86d9c307b7e93eb897.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="LET'S Community"><span class="site-name">LET'S Community</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">牛津通识·统计学｜小心你的数据</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-30T11:30:10.000Z" title="发表于 2023-07-30 19:30:10">2023-07-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-28T07:11:34.470Z" title="更新于 2024-08-28 15:11:34">2024-08-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%89%9B%E6%B4%A5%E9%80%9A%E8%AF%86/">牛津通识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">9.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>27分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="牛津通识·统计学｜小心你的数据"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><style>
+.custom-fonts{
+    font-family: 'OldSong', sans-serif;
+    margin-block-end: 24px;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+}
+.custom2-fonts{
+    font-family: 'OldSong', sans-serif;
+    margin-block-end: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+@font-face {
+    font-family: 'OldSong';
+    src: url('/fonts/OldSong.ttf') format('truetype');
+}
+</style>
+
+<div class="custom-fonts">
+    牛津通识读本·统计学<br>
+    <i>Statistics: A Very Short Introduction</i><br>
+</div>
+<div class="custom2-fonts">
+    <em>作者：</em>David J. Hand  ｜ <em>译者：</em>H. J. Hsü
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 350px; margin: 0;">
+    <div style="margin-right: 20px;">
+    <div title="牛津通识·统计学" referrerpolicy="no-referrer" class="card_box" style="background-image: url(https://pic.imgdb.cn/item/66cec18fd9c307b7e94ae8cc.png); width:220px; height:300px;">
+    <div class="card_mask">
+      <span>本书适合完全不了解统计学的小白获取一些初级认知。书中没有数理分析，但这些基础介绍对自学统计学也很有益处。</span>
+      <a target="_blank" rel="noopener" href="https://academic.oup.com/book/409">查看详情</a>
+    </div>
+    <div class="card_top">
+      <i class="fa-solid fa-book-open"></i>
+      <span>通识作品</span>
+    </div>
+    <div class="card_content">
+      <span>牛津通识·统计学</span>
+      <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+    </div>
+  </div>
+    </div>
+    <div style="width: 220px; height: 300px; border: 1px solid #ccc; padding: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); text-align: center; background-color: #f9f9f9; border-radius: 10px;">
+        <ul style="list-style-type: none; padding: 0; margin: 0;">
+            <strong><li style="margin-bottom: 15px; font-size: 18px;">本书目录</li></strong>
+            <li style="margin-bottom: 4px; font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro1)/">无处不在的统计学</a></li>
+            <li style="margin-bottom: 4px; font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro2)/">简单说一下统计学</a></li>
+            <li style="margin-bottom: 4px; font-size: 14px;"><strong>小心你的数据</strong></li>
+            <li style="margin-bottom: 4px; font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro4)/">概率</a></li>
+            <li style="margin-bottom: 4px; font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro5)/">估计和推断</a></li>
+            <li style="margin-bottom: 4px; font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro6)/">统计模型与方法</a></li>
+            <li style="font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro7)/">统计计算（& 推荐阅读）</a></li>
+        </ul>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<article class="entry heti">
+
+<div class="heti heti--ancient">
+
+<div class="custom-fonts">
+    小心你的数据
+</div>
+
+<blockquote>
+Raw data, like raw potatoes, usually require cleaning before use.<br>
+原始数据就像刚买来的土豆，用之前都要清洗一下。——Ronald A. Thisted
+</blockquote>
+
+<p>数据是通往世界之窗，它的重要之处在于能提供一个清晰的视角。窗户上有划痕、变形或玻璃上有污渍，可能会误导我们对外界的理解，而数据也是如此。如果数据以某种方式失真或损坏，则会产生错的结论。而数据往往不都是高质量的。事实上，我可能会更极端一点，认为很少遇到没有问题的数据集。在某种程度上，如果你遇到这样一个「完美」的数据集，你应该多长个心眼。也许你应该思考数据集经过了什么样的预处理，使它看起来这么完美。稍后我们会在讨论预处理的问题。</p>
+<p>标准教科书对统计思想与方法的描述倾向于假设数据没有问题（统计学家说数据是「干净的」，而不是「脏的」或「散乱的」）。这可以理解，因为这些书的目的是描述方法，如果数据是有问题的，需要额外费笔墨处理这个问题，这有损于描述的清晰度。然而，本书有点不同。因为本书不是在教授统计方法，而是在介绍和传达真实学科的经验。而真正的统计学学科必须处理肮脏的数据。</p>
+<p>为后文的论述做铺垫，我们需要了解「不良数据」的含义，以及如何识别并处理它们。不幸的是，数据就像人：他们可以以无限多的方式「变坏」（Data are like people: they can ‘go bad’ in an unlimited number of different ways）。然而，其中许多方法可以被归类为不完整或不准确。</p>
+<h3 id="不完整的数据"><a href="#不完整的数据" class="headerlink" title="不完整的数据"></a>不完整的数据</h3><p>如果数据集缺失了一些观测值，说明数据集不太完整。这些缺失值可能是随机产生的，与研究本身无关。例如，化学家不小心打算的试管、参加皮肤霜临床试验的患者因飞机延误而未能如期进行问卷调查、或某人因搬家而无法被联系到。但是，某个数据项的缺失本身也可能是有意义的。例如，填写申请表或问卷时，人们可能想要隐藏一些东西，为了不说谎，就只能选择不回答。或者只有具有特定观点的人才会填写问卷。如果没有意识到这一点，就会扭曲客户的观点。在线调查就很容易被这种情况所影响，因为只是被邀请人回答问题。调查者无法控制回答问卷的受访者代表总人口的程度，甚至不能确定同一个人是否多次回答问卷。</p>
+<p>其他类似「选择偏差」的例子随处可见，有时甚至相当隐蔽。例如，患者经常会退出药物临床试验。如果治愈了病情的患者觉得复查是多余的（他们已经被治好了）而没有参加下次检查，那么我们很容易得出结论，认为该药物没有效果，因为我们只看到仍然还在生病的患者。</p>
+<p>此类偏见的典例当属《文学文摘》错误地预测兰登将在1936年美国总统大选中压倒性地击败罗斯福。不幸地是，调研问卷只寄给了有电话和汽车的人，在1936年，这些人的平均财富高于总人口的平均财富。收到问卷的人不构成总人口的有效代表。事实证明，其他多数人都支持罗斯福。</p>
+<p>另一种未考虑缺失数据而导致错误结论的案例是挑战者号航天飞机，这已经成了一个略为经典统计案例。1986年，挑战者号航天飞机在发射时爆炸，机上所有人丧生。因为预计发射当天温度会很低，因此在发射前一晚召开了次会议，讨论是否按计划发射。过往的数据表示，气温与助推火箭上密封件的损坏之间显然没有关系。但这些数据不完整，且没有包括所有无损害的发射。这很令人遗憾，因为无损害的发射主要是在较高温度下进行的。所有数据的图表都显示了明显的关系，即在较低温度下有更大的可能发生损坏。</p>
+<p>作为最后一个例子，申请银行贷款、信用卡等的人会有一个被称为「信用评分」的评估，它本质上是客户无法偿还之概率的估计。这些估计是从统计模型（第6章会进一步讨论）中得出的，该模型使用了已经偿还或未能偿还的先前客户的数据。但存在一个问题：以前的客户并不能代表所有申请贷款的人。毕竟，以前的客户之所以被选择，是因为他们被认为是风险低的人。那些被认为风险较高且可能违约的申请人在一开始就不会被接受，因此不会被包括在数据中。任何未能考虑到数据集失真的统计模型都可能导致错误的结论。（Any statistical model which fails to take account of this distortion of the data set is likely to lead to mistaken conclusions.）在这种情况下，这很可能意味着银行破产。</p>
+<p>如果每个记录中只有一些缺失值（例如问卷调查的某些答案），那么有两种常见的分析方法。第一种方法很简单，抛弃掉不完整的记录即可。但这有两个潜在的问题。第一是它可能会导致选择偏差，从而导致上文中提到的数据扭曲。如果某种特定类型的记录方式本身就容易导致数值缺失，那么删除这些记录就会造成一个扭曲的数据集。第二个严重的问题是，这种做法可能导致能用于分析的数据量大大减少。假设一个问卷有100个问题，完全可能每个问题都有受访者没回答，因此所有记录都有缺失值。那么删除不完整的回应意味着删掉所有数据。</p>
+<p>处理缺失值的第二种常见方法是插入替代值。例如，假设某些记录中缺少年龄。那么，我们可以用已记录年龄的平均值替换掉缺失值。虽然这样会产生一个完整的数据集，但也有缺点。本质上来说还是我们在编造数据。</p>
+<p>如果有理由怀疑一个数字的缺失与它本应具有的值相关（例如，老年人可能不太愿意提供他们的年龄），则需要更复杂的统计技术。我们需要构建一个统计模型，可能是第6章中讨论的那种模型，结合数据间的关系，来估计缺失值具体是哪个数字的概率。</p>
+<p>值得一提的事，有必要考虑到并非所有的值都有记录。通常会用特殊符号来表示缺失值，如「N&#x2F;A」表示「不可用」。但有时也会使用数字代码，例如年龄的9999。在这种情况下，如果没让计算机知道9999代表缺失值的话，就会导致极不准确的结果。想象一下，在计算时存在大量9999时，算出来的平均年龄会是多少……</p>
+<p>总的来说，应该不至于惊讶这一点：不存在处理缺失数据的完美解决方案。所有处理方案都有某种额外的预设。最好的解决方案是在数据收集阶段别出太多问题。</p>
+<h3 id="不正确的数据"><a href="#不正确的数据" class="headerlink" title="不正确的数据"></a>不正确的数据</h3><p>不完整的数据是一种数据问题，但数据可能因很多其他的方式和原因而产生误差。造成此类问题有深层次原因也有浅层次原因。</p>
+<p>一个深层原因是定义「恰当」（并要得到普遍认可）很难。第一章提及的犯罪率就是一个例子。自杀率则是另一个例子：大部分情况下，自杀是独自的行为，因此没有人可以确定是否真的是自杀。尽管自杀者通常会留下遗书，但并非都是如此，所以必须用证据证明死因确实是自杀。这就使问题变得模糊起来，因为它引发了什么是相关证据，以及需要多少证据等问题。此外，许多自杀行为掩盖了自杀的事实：例如，为了使家人获得保险理赔。</p>
+<p>在另一种不同但更复杂的情况下，英国国家患者安全机构负责编纂医疗事故报告。随后，该机构试图对其进行分类，区分不同性质的事故，以便采取预防措施防止事故的发生。但问题在于，不同的人报告事故会用不同的描述方式。因此，即便是相同的事件也会被描述的各异。</p>
+<p>浅层的原因如，人们读取仪器或记录值时经常会犯错。例如，人们读取仪器时常常会无意识地四舍五入到最近的整数。使用旧式（非电子）血压记录仪记录的血压值分布显示，越来越多的值会被记录为60、70和80毫米，而非相邻的值，如69或72。而记录错误包括写反数字（如82写成28）；手写的7被误以为是1；个位数填到十位数列上，不小心多乘了10倍；美国风格的日期（月&#x2F;日&#x2F;年）可能与英国风格（日&#x2F;月&#x2F;年）混淆，或者反过来；等等。在1796年，天文学家皇家学会的纳维尔·马克斯勒恩（Nevil Maskelyne）解雇了他的助手大卫·金恩布洛克（David Kinnebrook），因为后者在天文台上用望远镜观察特定星球穿过望远镜经线的时间记录误差过大。这很重要，因为大英帝国的地位取决于他们的船只，而国家船只所处的经度则取决于格林威治天文台的时钟，该时钟的准确性则取决于通过天文观测的星历时间。后续的调查人员解释了这些不准确性源自心理反应时间的延迟以及上文提及的四舍五入现象。最后，以我可选的众多例子中的一个为例，1970年的美国人口普查称，有289名女孩同时丧偶和离婚。们还应该注意到，数据集越大，编制数据集的人员越多，处理数据集的阶段越多，错误也就越多。</p>
+<p>其他低级的数据错误还包括度量单位，例如将身高记录为米而非英尺，或将体重记录为磅而非千克。1999年，气候轨道器火星探测器在进入火星大气层时未能以正确的角度进入，因为设计人员混淆了磅和牛顿。在另一个混淆单位的例子中，这次是在医疗领域中，一位年迈的女士通常的血钙水平在8.6到9.1之间，突然出现了大幅下降到4.8的情况。负责护理的护士正要开始输注钙，但Salvatore Benvenga医生发现这个表面上的下降只是因为实验室改变了其报告结果的单位（从每分升毫克到每升毫克当量）。</p>
+<h3 id="误差传播"><a href="#误差传播" class="headerlink" title="误差传播"></a>误差传播</h3><p>而一旦出错，错误就会被传播，导致严重的后果。例如，印第安纳州西北部2006年的预算短缺和随之的裁员是由于一个错误导致了整个系统的错误。本应价值121900美元的房屋的价值被意外地弄成4亿美元。不幸的是，这种错误的价值会被进一步用于税率计算。</p>
+<p>在另一种情况下，2004年12月2日的《泰晤士报》报道称，英国约有的17万家公司中有66500家意外从一份用于编制官方建筑产出估算的清单中删除。这导致第一季度建筑产出增长实际下降2.6％，而不是官方数据显示的增长0.5％，随后的第二季度实际增长率为2.1％，而不是官方数据显示的增长5.3％。</p>
+<h3 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h3><p>正如上面的例子所表明的那样，任何统计分析的关键步骤都包括对数据的仔细核查，检查错误并在可能的情况下进行纠正。在某些情况下，这个前置步骤会比后续的分析阶段更为耗时。</p>
+<p>数据清理中的一个关键概念是异常值（outlier）。异常值是与其他值或预期值差异很大的值，呈现在分布的尾端。这些极端值有时是基于偶然因素而发生的。例如，尽管大多数时候天气都比较温和，但我们偶尔也会遇到严重的风暴。但在其他情况下，比如上文所提及的错误类型，似乎每天午夜自动校准时就会报告突然出现的大风，这就属于异常值。因此，检测数据中错误的一个好的策略是定位异常值，由专人进行筛查。这些异常值可能是单个（如，210岁的男性），也可能是多个变量组成呈现的异常，其中单独来看都是正常的（如，有3个孩子的5岁女孩）。</p>
+<p>当然，异常值检测并非检测数据错误的通用方案。毕竟，可能会出现外观完全正确的错误数据。例如，将别人的性别错误地统计为男性而非女性。最好的答案是采用最小化错误数量的数据输入实践。稍后我会详述这一点。</p>
+<p>如果检测到形式上的错误，则需要考虑如何处理这些错误。我们可以选择删除，并将其视为缺失值，然后尝试使用上述处理缺失值的程序。有时我们则可以灵活地猜测（intelligent guess）正确的值是什么。例如，假设我们在记录一组学生的年龄时，获得了18、19、17、21、23、19、210、18、18、23这样的字符串。通过观察这些数据，我们认为210很可能是因为输入时多按了一个0，因此应该是21。顺便说下intelligent guess这个词。与所有统计数据分析一样，仔细思考很重要。它不只是选择特定的统计模型让计算机完成工作的问题。计算机只会算术运算。</p>
+<p>上一段中关于学生年龄的例子中数据量很小，只涉及十个数字，因此很容易浏览、识别异常值并猜测正确值。但我们要处理的数据集越来越大。现在科学应用（例如粒子实验）、商业应用（例如电信）和其他领域中，要处理有几十亿个值的数据集的情况已经很普遍了。手动处理所有值通常不可行，我们必须依赖计算机。统计学家们已经开发了自动检测异常值的程序，但这并不能完全解决问题。自动程序有时会带来某些奇怪的警报，但忽略那些真的异常值。随之而来的问题是，如何处理计算机检测到的异常值。如果十亿个数字只有一个被标记为可疑值，那么还可以接受。但如果有十万个数字被标为可疑呢？再次进行人工检查和更正显然不可行。为了解决这种情况，统计学家又开发了自动化程序。最早的一些自动化编辑和校正方法是在人口普查和大型调查的背景下开发的。但这并非万无一失。最终结果就是，统计学家不能创造奇迹。低质量数据可能导致低质量（即不准确、错误、容易出错）的结果。避免这种情况的最佳策略是一开始就确保有高质量的数据。</p>
+<p>目前已有很多策略来避免在数据中出现错误。这些策略会因为应用领域和数据的获取方式而异。例如，在将临床实验数据从手工完成的病历记录中复制时，可能会在转录阶段产生错误。可以通过安排由不同的人分别进行重复的录入，并交叉对比检查来减少此种风险。当申请贷款时，申请数据（如年龄、收入、其他债务等）可以直接输入到计算机中，并且交互式的计算机软件可以在给出答案时交叉检验（例如，如果是房主，则负债是否包括抵押贷款？）。总之，应该设计录入表格来减少错误。这些表格不应该过于复杂，所有问题都要有明确答案。而且，在正式发布前进行小型试点测试是个好主意，可以发现数据获取中的各种问题。</p>
+<p>顺便一说，「计算机错误」（computer error）这个表达很常见，在出现数据错误时计算机是最常用的替罪羊。但计算机只是按照提供的数据执行既定的命令。统计错误并非计算机的锅。</p>
+<h3 id="观测数据-v-实验数据"><a href="#观测数据-v-实验数据" class="headerlink" title="观测数据 v 实验数据"></a>观测数据 v 实验数据</h3><p>常有必要将观察研究和实验研究区分开来，以及将观察研究和实验数据区分开来。「观察」一词指的是无法干预或介入记录数据过程的情况。例如，在对人们对政治家的态度进行调查时，合适的受访者会被问及他们的感受。或者，在研究遥远星系的属性时，这些属性将被观察并记录下来。在这两个例子中，研究人员仅仅选择了研究哪些人或物体，然后记录这些人或物体的属性。没有在研究人员与被研究的人或物体之间干预或介入的概念。相反，在实验研究中，研究人员实际上会操纵对象。例如，在临床试验中，他们可能会让志愿者接触某种药物，然后测量结果。在寻找效果最好的最终产品的制造实验中，他们会尝试不同的条件。</p>
+<p>观察研究和实验研究之间的一个基本区别在于，实验研究更有助于确定原因和结果之间的关系。例如，我们可能猜测一种特定的教孩子阅读的方法（比如说方法A）比另一种方法（比如说方法B）更有效。在观察研究中，我们会观察使用每种方法教育的孩子，并比较他们的阅读能力。但是我们无法影响谁会使用方法A和谁会使用方法B；这由其他人决定。这带来了一个潜在问题。即两个阅读组之间可能存在除教学方法外的其他差异。例如，极端点说，老师可能会把所有学习速度更快的学生分配到方法A中。或者当孩子们自己选时，那些已经在阅读方面更有感觉的孩子会倾向于选择方法A。我们可以采用统计学上更加复杂的方式来控制任何现有的儿童差异，以及我们认为可能影响他们快速学习阅读的其他因素。但仍有我们没考虑到的其他因素会导致差异。</p>
+<p>实验研究通过有意选择那个孩子使用哪种方法来克服这种可能性。如果我们知道除教学方法外可能影响阅读能力的所有可能因素，我们可以确保每种教学方法分配到的孩子是「平衡」的。例如，如果我们认为年龄会影响阅读能力，我们可以将同样数量的年幼孩子分配到每种方法中。通过这种方式，由年龄引起的任何阅读能力差异都不会对两组之间的差异产生影响：即便年龄确实影响阅读能力，那么在每个组中的影响都是相同的。实验研究还有一种更强大的选择哪个孩子接受哪种阅读方式的方法，即随机化。我将在下文展开讨论。</p>
+<p>这就意味着，在实验研究中，我们可以更自信地确定任何观察到之效应的原因。在比较阅读方法的实验中，我们可以更有信心地认为两组之间的阅读能力差异是教学方法的结果，而不是其他因素的结果。</p>
+<p>不幸的是，并非总是能够进行实验而不是观察性研究。我们没有太多机会用不同的处理方法去处理不同的星系！而且，有时使用实验方法会产生误导：许多社会调查之目的是找出人们实际的情况，而非「如果我们这样做会有什么影响」。然而，如果我们想知道潜在干预的效果，那么实验研究是更好的策略。它们存在于制药业、医学和心理学，在工业和制造业中无处不在，并且越来越多地应用于社会政策评估和客户价值管理等领域。</p>
+<p>总的来说，当收集旨在回答或探索某些问题的数据时，收集的数据越多，获得的答案就越准确。这是大数定律的结果，将在第四章中讨论。但是，收集数据越多，成本也就越多。因此，需要在收集数量和收集成本之间达成适当的平衡。统计学的各个子学科对此至关重要，尤其是实验设计和抽样调查这两个关键学科。</p>
+<h3 id="实验设计"><a href="#实验设计" class="headerlink" title="实验设计"></a>实验设计</h3><p>前文已经举了一个非常简单的实验例子。其中最简单的是进行两组随机临床实验。这里就是为了对比两种替代疗法（例如A和B），以便我们确定应该向新患者提供哪种疗法。为此，我们将给治疗方法A一个患者样本，治疗方法B另一个患者样本，并评估治疗的效果。如果平均而言，疗法A好过疗法B，那么我们将建议患者接受疗法A。上句中的「好过」的含义将取决于精确的研究。这可能意味着「治愈更多的患者」「延长平均寿命」「平均而言痛楚最少」等。</p>
+<p>现在，正如前文所指出的那样，如果两组患者在某些方面存有差异，那么我们可推测的结论是有限的。例如，如果接受疗法A的所有患者都是男性，而接受疗法B得都是女性，那么我们就不知道观察到的组别间的差异是由于疗法还是性别差异导致的：也许女性无论接受哪种疗法都会更快康复。同样的情况也适用于其他因素——年龄、身高、体重、病程、过往病史等。</p>
+<p>缓解这种困难的一种策略是将患者随机分配到两个治疗组。这种方法的优势在于，虽然它不能保证平衡（例如，这种随机分配过程可能导致一组中男性比例显著高于另一组），但概率的基本原则（在第四章中展开）告诉我们，过于失衡的状态发生的概率很小。事实上，我们可以进一步计算得出，不同程度的失衡有多大可能发生。这反过来使我们能计算出对自己的结论该有多大的信心。</p>
+<p>此外，如果随机分配是双盲的，那么就杜绝了潜意识影响患者的分组或测量的风险。双盲研究意味着既不知道进行试验的医生，也不知道患者接受的是哪种治疗。这可以通过让药片或药物看起来相似，仅编码为X或Y而不具体言明哪种治疗来实现这一结果。只有在分析揭示了X比Y更好之后，才会破解编码，告诉人们X实际上是疗法A或B。</p>
+<p>两组随机临床试验非常简单，而且很易于拓展：例如，我们可以迅速将其拓展到多个治疗组。然而，出于多样性的考虑，我会换个例子，一个市场园丁可能想知道低水平和高水平的灌溉方式之间谁更好，哪种能提升农作物的产量。他可以简单地采用一个前文所述的两组实验来验证这一点。由于我们知道结果并不完全可预测，他会让更多的大棚接受低水平和高水平的灌溉，然后计算每种方式的平均产量。例如，他可以决定用每种灌溉方式处理四个大棚。这正是前文所述的教学方法研究中的设计方式。</p>
+<p>但是现在假设这位农民还想知道低水平肥料和高水平肥料哪一个更有效。显然，他可以做另一个两组实验，这次有四个大棚接受低水平肥料，四个大棚接受高水平肥料。这很不错，但要回答这两个问题，即水和肥料的问题，总共需要十六个大棚。如果他还对低湿度、高湿度、温度、日照时间等效果感兴趣，那么很快他就没有大棚可用了。</p>
+<p>现在，有一种非常聪明的办法来解决这个问题，即使用因子实验设计（factorial experimental design）。农民不需要进行两个单独的实验来分别处理水和肥料的问题，而是将两个大棚分为（肥料&#x3D;低，水&#x3D;低），两个大棚处理为（低，高），两个处理为（高，低），两个处理为（高，高）。这只需要八个大棚，但我们仍然将四个大棚处理为低水量，四个为高水量；四个大棚为低肥料，四个为高肥料，因此分析结果时，会和采用两个独立实验时一样准确。</p>
+<p>事实上，这个因子设计（每个水和肥料都是一个「因素」）具有另一个很有吸引力的特点。它使我们能够看到肥料量在灌溉量上的影响是否存在差异：也许不同的灌溉量会给不同的施肥量带来不同的产量。这种相互影响的效应（interaction effect）是没有办法通过独立实验来观测的。</p>
+<p>这一基本思想在方方面面发挥着作用，来产生以最小成本获取精确信息的有用工具。当与其他实验设计的工具（如平衡、随机化和控制已知影响）相结合时，能开发一些高度复杂的实验设计方法。</p>
+<p>有时，在实验中，统计之外的问题很重要。例如，在临床试验与其他医疗及社会政策的调查中，伦理问题相当重要。在比较一种新兴疗法与（无效的）安慰剂的临床试验中，我们知道一半的志愿患者将接受完全没有生物学作用的药物，这合适吗？那些接受新兴治疗的人是否可能遇到副作用？这些事情必须与另一事实相平衡，即实验中获取的信息会令未来无数的患者受益。</p>
+<h3 id="抽样调查"><a href="#抽样调查" class="headerlink" title="抽样调查"></a>抽样调查</h3><p>假设我们为了有效地治理国家，希望知道某个城镇中100万名就业男女的平均收入。原则上，我们可以询问每个人的收入，并对计算结果的平均数。但这实操起来非常苦难，且几乎不可能。此外，在收集数据的过程中，收入也会发生变化：有些人会离职或跳槽，有些人则会得到加薪等。此外，找到每个人的费用也很高。我们可以试图通过依靠电话而非面对面采访来降低成本。但正如我们所看到的那样，在1936年美国总统选举的极端情况下，电话采访很有可能会错过重要的人群。</p>
+<p>我们需要一种降低数据收集成本的方法，同时让收集过程更高效，最好还要更准确。这样说听起来似乎很难实现，但确实存在具备这些特性的统计思想与工具。关键点还是我们之前多次提及的：样本的概念。</p>
+<p>我们需要的是一种降低数据收集成本的方法，同时使过程更快捷，如果可能的话，也更准确。这样说起来可能听起来很难实现，但确实存在具有这些特性的统计思想和工具。关键思想是我们之前多次遇到过的：样本（sample）的概念。</p>
+<p>假设我们不是找出100万名员工的个人收入，而只是询问了1000人。那显然，我们必须谨慎选择要询问的那1000个人。原因基本上与我们设计两组实验时，要采取措施确保两组之间唯一的差异是一个接受疗法A，一个接受疗法B一样。现在我们必须确保我们选择的特定的1000个人代表了100万人口这个整体。</p>
+<p>「代表」（representative）意味着什么？理想状态下，我们选择的1000个样本应该有与整个人口总量有着相同的男女比例、相同数量的年轻人、相同数量的兼职工人等。在某种程度上，我们可以通过选择那些男女比例正确的人来确保这一点。但显然，我们可以通过这种方式刻意去平衡的东西是有限的。</p>
+<p>我们在处理实验设计时会发现如何处理这个问题。在那里，我们通过将患者随机分配到各个组中来解决这个困难。在这里，我们通过从总人口中随机抽取1000个人来解决这个问题。再次强调，这不能保证样本在组成上与整个人口相似，但基本概率准则告诉我们，结果产生严重差异的概率很小。尤其是，基本的概率准则告诉我们，从样本中推导出的平均收入的估计值与整个人口的平均收入相差很大的概率非常小。确实，概率的两个基本属性——大数定律和中心极限定理（the law of large numbers &amp; the Central Limit Theorem）——告诉我们，通过增加样本量，可以减少误差发生的概率。事实证明，重要的不是样本中的人口的比例，而是样本有多大。不论样本总量是由1000万或100亿人组成，基于1000个样本的估计值大致都是相似的。由于样本量直接影响收集数据的成本，因此我们现在有了一个关于准确性与成本之间的直接联系：<em>我们的样本越大，成本越高，但样本估计值与整体平均值之间存在显著误差的概率就越小。</em></p>
+<p>从城镇就业人口中「随机抽取1000人」听起来可能很简单，但操作时要很小心。例如，我们不能只从城镇的老板中选择1000人，因为这些人大概不能代表所有100万的人口。同样，我们不能在晚上8点随机拜访住户，因为我们会错过那些工作到很晚的人，而这些工人的平均收入可能与其他人不同。一般来说，为了确保我们的1000个样本具有足够的代表性，我们需要一个抽样框架，即我们有囊括100万就业人口的列表，从中可以随机选取1000个人。有了这样的列表，就有可能确保每个人都有均等的可能性。</p>
+<p>这一简单随机抽样的概念是抽样调查背后的基本思想。我们制定一个抽样框架，并从中随机选取包含在该样本中的人。然后我们追踪他们（采访、电话、信件、电子邮件或其他方式）并记录我们想要的数据。这个基本思路已经在许多非常复杂且先进的方式中得到了阐述，从而带来了更准确且便宜的方法。例如，如果我们打算采访每个受访者，那这会花费相当的时间与金钱。从这个角度看，最好从地理位置上接近的小群体中选择受访者。群体抽样（Cluster Sampling）因此拓展了简单随机抽样。它不是从整个人口中随机选择1000人，而是选择（例如）10个100人的小组，且每组人员彼此接近。同样，如果我们通过选择样本的方式来确保某些因素间的平衡，而不仅是依赖随机抽样的过程，那么我们可以确定平衡可以实现。例如，我们可以从人口中随机选择一些女性，并从人口中再随机选择一些男性，具体数目间的比例与总人口之间的比例相同。这个过程被称为分层抽样（Stratiﬁed Sampling），因为它将在抽样框架中列出的总人口分类（在这种情况下是男性和女性）。如果用于分层（例如性别）与我们感兴趣的变量（这里是收入）强相关，则可在相同样本的大小下提高准确性。</p>
+<p>一般来说，在调查抽样中，收回所有采访者的反馈是很幸运的事情。几乎总会有一些没有反馈。这样，我们又回到了之前讨论缺失数据的问题，正如我们所看到的，数据缺失可能会导致样本偏差和错误的结论。如果那些高收入群体拒绝回复，那么我们会低估总人口的平均收入。因此，调查专家已经研究出各种方法来最小化和调整没有反馈的情形，包括对没有反馈的人进行回访和重新加权的统计操作。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>本章介绍了统计学中的原始材料——数据。统计学家已经开发出了各类高级的数据收集技术，通过最低成本获取最多的信息。但是，相信可以得到完美数据的想法是天真的。数据是现实世界的反映，而现实世界是复杂的。统计学家也开发出了各类工具来处理低质量的数据。但是，重要的是，统计学家不是魔术师。「垃圾进，垃圾出」的谚语同样适用于统计学。</p>
+</div>
+
+</article>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://carlshun.github.io">H. J. Hsü</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://carlshun.github.io/2023/07/30/Statistics%20(OUPSIntro3)/">https://carlshun.github.io/2023/07/30/Statistics%20(OUPSIntro3)/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://carlshun.github.io" target="_blank">LET'S Community</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/">统计学</a><a class="post-meta__tags" href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/">方法论</a></div><div class="post_share"><div class="social-share" data-image="https://pic.imgdb.cn/item/66cebb86d9c307b7e93eb897.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/30/Statistics%20(OUPSIntro4)/" title="牛津通识·统计学｜概率"><img class="cover" src="https://pic.imgdb.cn/item/66cebbefd9c307b7e93f0fb6.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">牛津通识·统计学｜概率</div></div></a></div><div class="next-post pull-right"><a href="/2023/07/30/Statistics%20(OUPSIntro2)/" title="牛津通识·统计学｜简单的描述统计"><img class="cover" src="https://s11.ax1x.com/2024/01/28/pFutE11.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">牛津通识·统计学｜简单的描述统计</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/07/30/Statistics%20(OUPSIntro1)/" title="牛津通识·统计学｜无处不在的统计学"><img class="cover" src="https://pic.imgdb.cn/item/66ceba64d9c307b7e93dd938.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜无处不在的统计学</div></div></a></div><div><a href="/2023/07/30/Statistics%20(OUPSIntro6)/" title="牛津通识·统计学｜统计模型与方法"><img class="cover" src="https://pic.imgdb.cn/item/66ceba5fd9c307b7e93dd652.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜统计模型与方法</div></div></a></div><div><a href="/2023/07/30/Statistics%20(OUPSIntro2)/" title="牛津通识·统计学｜简单的描述统计"><img class="cover" src="https://s11.ax1x.com/2024/01/28/pFutE11.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜简单的描述统计</div></div></a></div><div><a href="/2023/07/30/Statistics%20(OUPSIntro4)/" title="牛津通识·统计学｜概率"><img class="cover" src="https://pic.imgdb.cn/item/66cebbefd9c307b7e93f0fb6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜概率</div></div></a></div><div><a href="/2023/07/30/Statistics%20(OUPSIntro7)/" title="牛津通识·统计学｜计算机时代的统计学"><img class="cover" src="https://pic.imgdb.cn/item/66ceba60d9c307b7e93dd728.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜计算机时代的统计学</div></div></a></div><div><a href="/2023/07/30/Statistics%20(OUPSIntro5)/" title="牛津通识·统计学｜估计和推断"><img class="cover" src="https://pic.imgdb.cn/item/66cebb86d9c307b7e93eb7a6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜估计和推断</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic.imgdb.cn/item/66557df0d9c307b7e98bbf67.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">H. J. Hsü</div><div class="author-info__description">Law, Economics, Technology and Sociology (LET'S)</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" href="mailto:jwptysjh@outlook.com"><i class="fas fa-envelope"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">算来平生无长物，聊以诗文待君顾。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%AE%8C%E6%95%B4%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-number">1.</span> <span class="toc-text">不完整的数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-number">2.</span> <span class="toc-text">不正确的数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AF%E5%B7%AE%E4%BC%A0%E6%92%AD"><span class="toc-number">3.</span> <span class="toc-text">误差传播</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">预处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%82%E6%B5%8B%E6%95%B0%E6%8D%AE-v-%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE"><span class="toc-number">5.</span> <span class="toc-text">观测数据 v 实验数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1"><span class="toc-number">6.</span> <span class="toc-text">实验设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%BD%E6%A0%B7%E8%B0%83%E6%9F%A5"><span class="toc-number">7.</span> <span class="toc-text">抽样调查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/14/ComputationalLaw/" title="计算思维与法学的“视域融合”"><img src="https://pic.imgdb.cn/item/66bde77cd9c307b7e97ad039.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算思维与法学的“视域融合”"/></a><div class="content"><a class="title" href="/2024/08/14/ComputationalLaw/" title="计算思维与法学的“视域融合”">计算思维与法学的“视域融合”</a><time datetime="2024-08-14T12:22:10.000Z" title="发表于 2024-08-14 20:22:10">2024-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/30/Images%20in%20Sociology%20of%20Law/" title="以图看法：法社会学中的「图像」研究"><img src="https://s11.ax1x.com/2024/02/01/pFMBJRU.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="以图看法：法社会学中的「图像」研究"/></a><div class="content"><a class="title" href="/2024/07/30/Images%20in%20Sociology%20of%20Law/" title="以图看法：法社会学中的「图像」研究">以图看法：法社会学中的「图像」研究</a><time datetime="2024-07-30T11:00:10.000Z" title="发表于 2024-07-30 19:00:10">2024-07-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/20/Gadamer-hermeneutics-1/" title="读《诠释学》（一）"><img src="https://pic.imgdb.cn/item/661cc51268eb93571375cf94.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="读《诠释学》（一）"/></a><div class="content"><a class="title" href="/2024/07/20/Gadamer-hermeneutics-1/" title="读《诠释学》（一）">读《诠释学》（一）</a><time datetime="2024-07-20T11:00:10.000Z" title="发表于 2024-07-20 19:00:10">2024-07-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/30/Statistics%20(OUPSIntro7)/" title="牛津通识·统计学｜计算机时代的统计学"><img src="https://pic.imgdb.cn/item/66ceba60d9c307b7e93dd728.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="牛津通识·统计学｜计算机时代的统计学"/></a><div class="content"><a class="title" href="/2023/07/30/Statistics%20(OUPSIntro7)/" title="牛津通识·统计学｜计算机时代的统计学">牛津通识·统计学｜计算机时代的统计学</a><time datetime="2023-07-30T11:56:10.000Z" title="发表于 2023-07-30 19:56:10">2023-07-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/30/Statistics%20(OUPSIntro6)/" title="牛津通识·统计学｜统计模型与方法"><img src="https://pic.imgdb.cn/item/66ceba5fd9c307b7e93dd652.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="牛津通识·统计学｜统计模型与方法"/></a><div class="content"><a class="title" href="/2023/07/30/Statistics%20(OUPSIntro6)/" title="牛津通识·统计学｜统计模型与方法">牛津通识·统计学｜统计模型与方法</a><time datetime="2023-07-30T11:55:10.000Z" title="发表于 2023-07-30 19:55:10">2023-07-30</time></div></div></div></div></div></div></main><footer id="footer" style="background: #000000"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By H. J. Hsü</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container').forEach(node => {
+            if (node.hasAttribute('display')) {
+              btf.wrap(node, 'div', { class: 'mathjax-overflow' })
+            } else {
+              btf.wrap(node, 'span', { class: 'mathjax-overflow' })
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script></div><canvas id="universe"></canvas><script src="/js/universe.js"></script><script src="/js/scripts.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

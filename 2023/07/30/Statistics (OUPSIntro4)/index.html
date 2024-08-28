@@ -1,0 +1,372 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>牛津通识·统计学｜概率 | LET'S Community</title><meta name="author" content="H. J. Hsü"><meta name="copyright" content="H. J. Hsü"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="对牛津通识系列《统计学》一书的译介。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="牛津通识·统计学｜概率">
+<meta property="og:url" content="https://carlshun.github.io/2023/07/30/Statistics%20(OUPSIntro4)/index.html">
+<meta property="og:site_name" content="LET&#39;S Community">
+<meta property="og:description" content="对牛津通识系列《统计学》一书的译介。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/66cebbefd9c307b7e93f0fb6.jpg">
+<meta property="article:published_time" content="2023-07-30T11:40:10.000Z">
+<meta property="article:modified_time" content="2024-08-28T07:11:56.748Z">
+<meta property="article:author" content="H. J. Hsü">
+<meta property="article:tag" content="统计学">
+<meta property="article:tag" content="方法论">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/66cebbefd9c307b7e93f0fb6.jpg"><link rel="shortcut icon" href="/img/girl.jpg"><link rel="canonical" href="https://carlshun.github.io/2023/07/30/Statistics%20(OUPSIntro4)/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '牛津通识·统计学｜概率',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-28 15:11:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/fonts/font.css"><link rel="stylesheet" href="/css/heti.min.css"><link rel="stylesheet" href="/css/result.css"><link rel="stylesheet" href="/css/styles.css?1"><link rel="stylesheet" href="/css/icon.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic.imgdb.cn/item/66557df0d9c307b7e98bbf67.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic.imgdb.cn/item/66cebbefd9c307b7e93f0fb6.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="LET'S Community"><span class="site-name">LET'S Community</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">牛津通识·统计学｜概率</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-30T11:40:10.000Z" title="发表于 2023-07-30 19:40:10">2023-07-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-28T07:11:56.748Z" title="更新于 2024-08-28 15:11:56">2024-08-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%89%9B%E6%B4%A5%E9%80%9A%E8%AF%86/">牛津通识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>27分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="牛津通识·统计学｜概率"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><style>
+.custom-fonts{
+    font-family: 'OldSong', sans-serif;
+    margin-block-end: 24px;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+}
+.custom2-fonts{
+    font-family: 'OldSong', sans-serif;
+    margin-block-end: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+@font-face {
+    font-family: 'OldSong';
+    src: url('/fonts/OldSong.ttf') format('truetype');
+}
+</style>
+
+<div class="custom-fonts">
+    牛津通识读本·统计学<br>
+    <i>Statistics: A Very Short Introduction</i><br>
+</div>
+<div class="custom2-fonts">
+    <em>作者：</em>David J. Hand  ｜ <em>译者：</em>H. J. Hsü
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 350px; margin: 0;">
+    <div style="margin-right: 20px;">
+    <div title="牛津通识·统计学" referrerpolicy="no-referrer" class="card_box" style="background-image: url(https://pic.imgdb.cn/item/66cec18fd9c307b7e94ae8cc.png); width:220px; height:300px;">
+    <div class="card_mask">
+      <span>本书适合完全不了解统计学的小白获取一些初级认知。书中没有数理分析，但这些基础介绍对自学统计学也很有益处。</span>
+      <a target="_blank" rel="noopener" href="https://academic.oup.com/book/409">查看详情</a>
+    </div>
+    <div class="card_top">
+      <i class="fa-solid fa-book-open"></i>
+      <span>通识作品</span>
+    </div>
+    <div class="card_content">
+      <span>牛津通识·统计学</span>
+      <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+    </div>
+  </div>
+    </div>
+    <div style="width: 220px; height: 300px; border: 1px solid #ccc; padding: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); text-align: center; background-color: #f9f9f9; border-radius: 10px;">
+        <ul style="list-style-type: none; padding: 0; margin: 0;">
+            <strong><li style="margin-bottom: 15px; font-size: 18px;">本书目录</li></strong>
+            <li style="margin-bottom: 4px; font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro1)/">无处不在的统计学</a></li>
+            <li style="margin-bottom: 4px; font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro2)/">简单说一下统计学</a></li>
+            <li style="margin-bottom: 4px; font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro3)/">小心你的数据</a></li>
+            <li style="margin-bottom: 4px; font-size: 14px;"><strong>概率</strong></li>
+            <li style="margin-bottom: 4px; font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro5)/">估计和推断</a></li>
+            <li style="margin-bottom: 4px; font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro6)/">统计模型与方法</a></li>
+            <li style="font-size: 14px;"><a target="_blank" rel="noopener" href="https://www.carlshun.com/2023/07/30/Statistics%20(OUPSIntro7)/">统计计算（& 推荐阅读）</a></li>
+        </ul>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<article class="entry heti">
+
+<div class="heti heti--ancient">
+
+<div class="custom-fonts">概率</div>
+
+<blockquote>
+Being a statistician means never having to say you are certain.<br>
+做一个统计学家意味着从来不说一定。_Anon
+</blockquote>
+
+<h2 id="机遇的本质"><a href="#机遇的本质" class="headerlink" title="机遇的本质"></a>机遇的本质</h2><p>第一章中有关统计学的定义之一是，它是处理不确定性的科学。很显然，世界充满着不确定性，这就是统计思想与方法无处不在的原因之一。未来是一片未知的土地，我们不确定会发生什么。有很多意想不到的事会发生：汽车突然抛锚、我们遇到事故、被闪电击中，免得让人以为意外之事都是糟糕的，你也可能会赢的彩票。更具体地说，我们不确定哪匹马会赢得比赛，或者死亡前想到的最后一个数字是什么。最后，我们也无法准确预测我们的寿命。</p>
+<p>然而，尽管如此，人类最伟大的发现之一，就是有一些原则涵盖了机遇与不确定性。也许这听起来很矛盾，毕竟不确定之事本质上就是不确定的。那么，为何会有自然法则来支配这些事情呢？</p>
+<p>一个答案是，虽然单个事件的走向是不确定且不可预测的，但它们聚集到一起时，就可以评头论足了。典型的例子就是抛硬币，虽然我不能说一枚硬币在单次抛掷中呈现正或反（我们假设硬币是「均质的」，而且抛掷时没采用任何技巧）。另一个例子，将出生的婴儿是男性还是女性。在受孕时，这是一个纯粹的偶然且不可预知的事件。但我们知道，男孩子最多刚过新生儿整体一半的比例。</p>
+<p>自然的可观测性是控制不确定性法则的一个例子。它被称作大数定律（the law of large numbers），因为我们考虑的情况越多，比例就越接近特定值（在硬币和孩子性别上五五开）。该定律具有各种含义，并且它是我们驯服、控制和利用不确定性最为强大的统计工具之一。我们会在本章末尾，及全书中不断讨论它。</p>
+<h2 id="理解概率"><a href="#理解概率" class="headerlink" title="理解概率"></a>理解概率</h2><p>为了使我们能毫无歧义地讨论不确定性及不可预测性的问题，统计学就需要像任何一门学科一样使用一种精确的语言：概率语言。如果这是你第一次解除概率语言，那么你应该心里有数，就像接触任何一门新语言一样，你需要一些努力来适应它。确实，考虑到这一点，你可能会发现本章有多个内容需要反复阅读：甚至你读完本书可能还会回过头来阅读本章。</p>
+<p>概率术语在17世纪蓬勃发展。如布莱斯·帕斯卡、皮埃尔·德·费马、克里斯蒂安·惠更斯、雅各布·伯努利，以及后来的皮埃尔·西蒙·拉普拉斯、亚伯拉罕·德·莫夫雷、西蒙—丹尼斯·泊松、安托万·古诺、约翰·文恩等数学家奠定了它的基础。到20世纪初，关于概率科学的所有思想都已经到位，1933年俄罗斯数学家安德雷·柯尔莫哥洛夫（Andrei Kolmogorov）提出了一组公理，这些公理提供了完整的形式概率数学演算。从那时起，这个公理系统几乎被普遍采用。</p>
+<p>柯尔莫哥洛夫的公理提供了操控概率的机制，但它们是一种数学构造。要用这种构造来解释现实世界，则需要说出数学机制中的符号在现实世界中代表着什么。也就是说，我们需要说出数学的「意义」。</p>
+<p>概率计算将0～1之间的数字分配给不确定的事件，来表示它们将发生的概率。概率为1意味着事件是确定的（例如，如果有人在我写这本书时通过我家的窗户看到我坐在办公桌前的概率）。概率为0表示某项赛事是不可能的（例如，十分钟跑完一场马拉松的概率）。对于可能发生但既不确定也不不确定之事，我们用0和1之间的数字来表示其发生的「概率」。</p>
+<p>看待这个数字的一种方式是，它表达了个体对事件将会发生的信念程度。现在，不同的人会将持有对同一事件是否会发生的、不同程度的信息，因此不同的人可能会有不同程度的信念，即对同一事件的概率估值不同。因此，这种概率被称为主观概率或个人概率：它取决于谁在评估概率。很显然，随着获取信息的变化，人们的概率估值也会变化。你可能一开始持有某种信念，例如硬币正反概率为1&#x2F;2（基于过往投掷硬币的经验），但观察发现连续一百局都是只有正面没有反面时，你可能会质疑一开始的信念，并改变你的主观概率，认为这枚硬币一定会是正面。</p>
+<p>目前已经开发出了基于下注策略估计个人主观概率的工具，但与任何测量程序一样，在如何准确估计概率方面存在着限制。</p>
+<p>另一个关于事件之概率的观点是，它是在相同情况下重复无限次，某一事件发生占比。</p>
+<p>上文中公平抛掷硬币就是一个例子。我们已经看到，随着硬币的投掷，正面向上的比例越来越接近某一特定值。这个值就是硬币在任何一次抛掷中都会出现的概率。由于频率或计数这一方法在概率定义中的作用，其被称为概率的频率解释。</p>
+<p>就如同主观方法一样，它也存在一些现实中的限制，让我们无法确定准确的频率。两次抛掷硬币的情况不会完全相同。一些分子会在第一次抛掷时从硬币上磨损，气流会有变化，硬币在第一次抛掷后会稍微变暖。在任何情况下，我们都会终止自己的抛掷实验，所以我们并不能扔无限次。</p>
+<p>这两种对概率的解释有着不同的性质。主观概率可以将概率分给每个单独的事件，有些事在相同条件下重复无限次或大量重复并没有意义。例如，很难确定对无限次同样的暗杀美国下一任总统的假设应持何种态度，人们往往众说纷纭。因此，将频率解释应用于此类事件看起来是相当困难的。另一方面，主观方法将概率从外部世界的客观属性（如质量或长度）转化为观察者与世界之间相互作用的属性。主观概率就像情人眼中的美一样。（Subjective probability is, like beauty, in the eye of the beholder.）有些人会认为这是一个弱点：这意味着不同的人可以从相同数据的相同分析中得出不同的结论。其他人则会认为这是一种优势：结论会被你的既有的成见所影响。</p>
+<p>还有其他关于概率的解释。例如，「古典」方法假设所有事件均由同样可能性的基本事件的集合组成。例如，一个骰子的投掷可能会产生1、2、3、4、5或6，且骰子的对称性设计则表明这六个结果的可能性相同，因此每个结果都有1&#x2F;6的概率（它们的和必须为1，因为结果肯定是1、2、3、4、5或6中的一个）。然后，举个例子，获得偶数的概率就是获得2、4或6的各个同样可能的事件概率之和，因此为1&#x2F;2。然而，在现实中，很难确定这些「等可能」之事是什么。例如，如果我想知道我早上上班时间小于一个小时的可能性，那么就完全不清楚等可能发生的基本事件应该是什么。在这种情况下，没有类似于骰子那种显著的对称性。此外，还存在一个问题，即在要求基本事件「等可能」的定义中存在循环内容的问题。我们似乎在用概率来定义概率。</p>
+<p>这里值得强调的是，这些对概率的不同解释都统一于概率公理下，适用相同的数学法则。只是不同的真实世界的映射，即数学对象含义的不同意义。我有时会说，微积分是一样的，但理论千差万别。（The calculus is the same, but the theory is different.）在统计应用中，正如我们在第五章中将要看到的那样，不同的解释有时会导致不同的结论。</p>
+<h2 id="概率的法则"><a href="#概率的法则" class="headerlink" title="概率的法则"></a>概率的法则</h2><p>我们业已提及了一个概率法则，即大数定律。这是一条将数学概率与现实世界中的经验观察所连接起来的定律。其他概率则隐含在概率公理中。另一些非常重要的法则则有单独的概念。</p>
+<p>如果一个事件的发生不影响另一个事件发生的可能性，则称两个事件相互独立。用左手扔硬币的结果是正还是反，不影响用右手扔硬币的结果。这两次抛掷之间相互独立。如果我左手硬币正面朝上的概率是1&#x2F;2，而我右手硬币正面朝上的概率是1&#x2F;2，那么两者都是正面朝上的概率是1&#x2F;2 × 1&#x2F;2 &#x3D; 1&#x2F;4。显而易见，在我们预期的无限次双掷实验中，我们会得到一半的左手硬币显示正面，一半的右手硬币显示正面，因为第一次抛掷的结果不会影响第二次抛掷。总体而言，约有1&#x2F;4的概率两次投掷都显示正面。类似的，约有1&#x2F;4的概率显示左反、右正；约有1&#x2F;4的概率显示左正、右反；并且约有1&#x2F;4的概率都显示反面。</p>
+<p>与之相反，在大街上滑倒的可能性与是否下雪之间显然不是无关的。这些事件之间相互联系。我们在第一章中看到了另一个依赖性的例子：同一家庭中有两名婴儿猝死的悲剧，即萨利·克拉克案例。当事件之间不独立时，我们不能简单地通过将它们各自发生的概率相乘来计算二者同时发生的概率。准确地说，这是萨利·克拉克案的核心。要看到这点，让我们来分析相互依赖事件间的最极端情形：一个事件的结果完全受制于另一个事件的结果。例如，掷一次硬币会有两个事件「硬币正面朝上」和「硬币反面朝下」。每个事件都有1&#x2F;2的概率：硬币显示正面的概率为1&#x2F;2，显示反面的概率也是1&#x2F;2。但这二者之间显然不是独立的。事实上，它们完全依赖于彼此。毕竟，如果第一个事件为真（正面朝上），则第二个事件也必须为真（反面朝下）。因为它们之间互相依赖，所以它们同时发生的概率只是第一件事的概率，即1&#x2F;2。如果我们将两个一半的概率相乘，则不是正确的结果。</p>
+<p>通常，两个事件之间的依赖性意味着一个事件发生的概率取决于另一个事件是否会发生。</p>
+<p>统计学家将两个事件都发生的概率称为二者的联合概率（joint probability）。例如，我们可以说下雪时我滑倒的联合概率。两个事件的联合概率与其中一个事件在另一个事件已发生之情况下发生的概率密切相关。这被称作条件概率（conditional probability）：在我们已知一个事件发生时，另一个事件发生的概率。因此，既然已经下雪了，那么可以进一步讨论我滑倒的条件概率。</p>
+<p>事件A和B都发生的（联合）概率只是A发生的概率乘以给定A发生的B发生的（条件）概率。下雪且我滑倒的（联合）概率是下雪的概率乘以我滑倒的（条件）概率。</p>
+<p>为了阐明这点，我们假设扔一次骰子和两个事件。事件A显示的是数字可以被2整除，事件B显示的是数字可以被3整除。事件A和B的联合概率是我得到一个既可以被2整除又可以被3整除之数字的概率。该概率为1&#x2F;6，因为数字1、2、3、4、5和6中只有一个可以被2和3整除。现在，在所有能被2整除的数字中（即2、4或6），只有一个能被3整除，因此事件A发生的条件下事件B发生的概率是1&#x2F;3。最后，事件A发生的概率是1&#x2F;2（1、2、3、4、5和6中有一半能被2整除）。因此，我们发现事件A（1&#x2F;2）乘以事件A发生的条件下事件B发生的概率（1&#x2F;3）等于1&#x2F;6。这与同时获得能被2和3整除的数字的联合概率相同；即事件A和事件B同时发生的联合概率。</p>
+<p>实际上，我们在第一章中遇到了条件概率的形式，即检察官谬误。这提醒我们，给定事件B发生后事件A发生的概率与给定事件A发生后事件B发生的概率不同。例如，公司高管会驾驶汽车的概率与会驾驶汽车的人是公司高管的概率不同。这使得我们得出另一个非常重要的概率法则：贝叶斯定理（Bayes’s theorem，或贝叶斯规则）。贝叶斯定理允许我们将这两个条件概率联系起来，即A给定B的条件概率和B给定A的条件概率。</p>
+<p>我们刚才看到，事件A和事件B同时发生的概率等于A发生的概率乘以在A发生的情况下B发生的条件概率。但是这也可以反过来写：事件A和事件B同时发生的概率也等于B发生的概率乘以在B发生的情况下A发生的条件概率。贝叶斯定理表达的就是这个意思（虽然通常用不同的方式表达），即这只是写下事件A和事件B的联合概率的两种不同方式。也就是说，A发生的概率乘以在A发生的情况下B发生的概率等于B发生的概率乘以在B发生的情况下A发生的概率。两者都等于事件A和事件B同时发生的联合概率。在我们“开车的公司高管”的例子中，贝叶斯定理等价于说，「你会开车且你是公司高管的概率」乘以「你会开车的概率」等于「你是公司高管且你会开车的概率」乘以「你会成为公司高管的概率」。两者都等于你成为公司高管且会开车的联合概率。</p>
+<p>另一个概率定律表明，如果两个事件中的任意一个可以发生，但不能同时发生，那么其中一个或另一个事件发生的概率是每个事件单独发生的概率之和。抛硬币的结果显然不能同时是正反，那么出现正面或反面的概率是出现正面的概率和出现反面的概率之和。如果没有出老千，那么二者单独的概率都是1&#x2F;2，二者之和为1。这是有道理的：1对应着确定性，而投掷结果是反面或正面这一点是确定的（我假设硬币不会竖起来！）。回到我们扔骰子的例子：得到偶数的概率是得到2、4或6这些结果的概率之和，因为它们不能同时出现（在掷一次骰子中也没有其他获得偶数的方法）。</p>
+<h2 id="随机变量及其分布"><a href="#随机变量及其分布" class="headerlink" title="随机变量及其分布"></a>随机变量及其分布</h2><p>在第2章中，我们看到了如何使用简单的描述统计方法从某一变量的数值汇总中提取信息，即将这些值压缩成一个分布，以便容易理解。现在，任何现实中的数据集都是有限的——它只能包含有限数量的数值。这个有限集可能是我们正在考虑的某种类型所有对象的值（例如，某年所有联盟足球运动员的分数），或者它可能只是某些对象的值，即一个样本。在谈及抽样调查时，我们看到过这方面的例子。</p>
+<p>样本是完整的「总体」值的子集。在某些情况下，完整的「总体」是不可获取的，可能过于庞大或无限的，所以我们别无选择，只能用样本工作。例如，在测量光速的实验中，每次我进行测量时，都希望测量值之间存有差异，因为测量过程本质上是不确定的。而且，原则上，我可以不断地进行测量；也即测量的潜在总体是无限的。但这是不可能的，所以我必须满足于有限的测量样本。每个测量值都可能源自我可能获得的值之总体。在其他情况下，完整的总体是有限的。例如，在对某个城镇男性肥胖症进行研究时，总体是有限的，虽然原则上我可以称量城镇中的每个男性，但在实践中我可能不想这样做，而是采用样本抽取的方式。再次强调，样本中的每个值都是从可能值的总体中抽取的。</p>
+<p>在这两个例子中，我在具体测量之前所知道的是，它将从可能值之集合中获取一些值。每个值都会以一定的概率出现，但我所知的也就这么多，也不太可能知道具体概率是多少。我肯定无法准确预测下一次测量的光速值或下一个被我测量的人的体重是多少。同样，在掷骰子时，我知道结果可能是1、2、3、4、5或6，我知道这些结果是等可能出现的（我的骰子是一个完美的立方体），但除此之外，我无法预测哪个数字会出现。与速度和体重测量一样，结果是随机的。因此，这种变量被称为随机变量（random variables）。</p>
+<p>我们已经接触到了分位数的概念。例如，在百分位数的情况下，分布的第20个百分位数是这样一个值，即20%的数据值小于它，第8个百分位数是这样一个值，即8%的数据值小于它，以此类推。一般地，第k个百分位数比样本中k%的值小。我们可以想象类似的百分位数不仅适用于我们观察到的样本，还适用于我们可能观察之值的总体。如果我们知道完整值总体的第20个百分位数，那么我们就知道从总体中随机抽取一个值小于该百分位数的概率为20%。一般地，如果我们知道总体值的所有百分位数，我们就可能知道在最低的10%、25%、16%、98%或其他任何我们想选的百分比中抽取特定值的概率。因此，从某种意义上说，我们将了解我们可抽取的可能值的分布。我们不知道下一个抽取的值是什么，但我们会知道它有多大概率是总体中最小的1%、最小的2%，以此类推。</p>
+<p>分布的所有分位数集有一个名称，叫做累积概率分布（the cumulative probability distribution）。这是一种「概率分布」，它会告诉我们选择一个低于我们所选择之值的概率。它是「累积的」，因为显然，抽取某个小于x值的概率随着x的增大而增大。在男性体重的例子中，如果我知道选择一个体重小于70千克男性的概率是1&#x2F;2，那么我就知道选择一个体重小于80千克男性的概率大于1&#x2F;2，因为我还可以选择体重小于70千克的男性和体重在70千克到80千克之间的男性。在极限情况下，抽取值小于或等于总体中最大值的概率为1；这是一个确定事件。</p>
+<p>该想法如图2所示。在该图中，随机变量的值（如体重）为水平轴，小于该值的概率为纵轴。曲线的意义是：对于任何给定之随机变量的值，随机选择的值会小于该给定值的概率。</p>
+<p><img src="/media/image1.png">{width&#x3D;“5.114583333333333in” height&#x3D;“3.375in”}</p>
+<p>图2：累积概率分布</p>
+<p>随机变量的累积概率告诉我们随机选择的值将小于某一特定值的概率。另一种看待事物的方式是看随机选择的值位于任何两个特定值之间的概率。这种概率可以简易地表示为概率密度曲线下两个值之间的面积。例如，图3显示了这样一条概率密度曲线，在a点和b点之间曲线下的（阴影）区域意味着随机选择之值落在a和b之间的概率。例如，在上文中男性体重的分布中使用这样的曲线，我们可以找到随机选择的男性体重值落在70千克和80千克之间的概率，或者任何一对值，或高于低于我们想要的任何值。通常，随机选择的值更有可能出现在概率最密集的区域；即概率密度曲线最高的区域。</p>
+<p><img src="/media/image2.png">{width&#x3D;“5.072916666666667in” height&#x3D;“3.53125in”}</p>
+<p>图3：概率密度函数</p>
+<p>请注意，图3中曲线下的总面积必须为1，对应确定事件之概率：随机选择的值必须是<i></i><i>某些</i><i></i>值。</p>
+<p>随机变量的分布曲线有各种形状（Distribution curves for random variables have various shapes.）。随机选择的女性体重落在70千克和80千克之间的概率通常不同于随机选择的男性体重落在这两个值之间的概率。我们可能会猜测女性体重分布曲线在较轻的值处分布更多，而男性的则不同。</p>
+<p>某些分布图形非常重要。这有各种各样的原因。一方面，自然现象会产生特定的形状或与它们非常接近的形状；另一方面，分布是概率法则的结果。</p>
+<p>也许所有分布中最简单的是<i></i>伯努利分布（the Bernoulli distribution）<i></i>。它只有两个值，概率p和1-p。由于它只能取两个值，因此可以确定一个或另一个值会出现，而这两个结果的概率之和必为1。在许多情况下这种分布是非常有用的：毕竟只有两个结果的情况非常常见——抛硬币的结果是正还是反，出生结果是男还是女。在这两个例子中，p值为1&#x2F;2或接近1&#x2F;2。但是，许多其他情况下只有两种可能的结果：是&#x2F;否、好&#x2F;坏、违约与否、中断与否、停止&#x2F;继续等。</p>
+<p><i></i>二项分布（the binomial distribution）<i></i>是伯努利分布的拓展。如果我们掷一枚硬币三次，那么可能会获得一个、两个或三个正面。如果我们在打电话时有三个接线员，独立地回应来电，那么在任一时刻都可能有零个、一个、两个或三个接线员在忙碌。二项分布告诉我们获取0、1、2或3这些数字中任意一个的概率。当然，它更普遍地适用，而不仅是三个事件。我们也可以抛掷100次硬币，那么二项分布也会告诉我们同时获得0、1、2、...、100枚正面的概率。</p>
+<p>电子邮件会随机送达至我的邮箱。平均而言，在一个工作日的早晨，大约每小时会有五封电子邮件到达，但每小时到达的邮件数量可能会大幅偏离这个值：有时会有十封，有时一封都没有。<i></i>泊松分布（the Poisson distribution）<i></i>可用于描述每小时到达的电子邮件数量的概率分布。它可以告诉我们（如果电子邮件独立到达并且它们到达的总速率是恒定的）没有电子邮件到达、有一封到达、有两封到达等的概率。这与二项分布不同，因为至少原则上，在任何一小时内到达的数量没有上限。对于100次硬币投掷，我们不可能观察到100次以上的正面，但我可能（在非常糟糕的情况下！）在一个小时内收到100多封电子邮件。</p>
+<p>迄今为止，我描述的所有概率分布都是离散随机变量的分布。也就是说，随机变量只能取某些值（在伯努利分布的情况下是两个值，在二项式分布的情况下是投掷硬币&#x2F;操作员的数量，泊松分布的情况下是0、1、2、3...等整数）。也存在连续型的随机变量，可以在某个范围内取任何值。例如，身高（在测量仪器的精度范围内）可以取某个范围内的任何值，并不限于4英尺、5英尺或6英尺等特定值。</p>
+<p>如果一个随机变量只能在某个有限区间内取值（如0、1之间），并且它取该区间内任何值的概率相同，那么它就是服从均匀分布（uniform distribution）的。举例而言，如果邮递员总是在上午10点至11点之间到达，但以完全不可预测的方式到达（例如他在10: 05到10: 10之间到达的概率与在任何其他五分钟时间段内到达的概率相同），则他到达时间在此区间内的分布就是均匀分布。</p>
+<p>一些随机变量可以取任一正数，例如，某些现象的持续时间。以花瓶的寿命为例。花瓶不会老化，因此，如果一只特别喜欢的花瓶已经被保存80年了，它在下一年被打破的概率与它只被保存10年的概率相同（其他所有条件相等的情况下）。可以对比思考一下80岁的人和10岁的人在下一年死亡的概率。对于花瓶来说，如果它在时间t之前没有被打破，那么在下一时刻被打破的概率是相同的，无论t的值是多少（同样，其他所有条件相等）。花瓶的寿命就是服从<i></i>指数分布（the exponential distribution）<i></i>的。但实际上，指数分布有着广泛的应用，而不仅局限于花瓶的寿命！</p>
+<p>也许最著名的连续分布是<i></i>正态分布或高斯分布（the normal or Gaussian distribution）<i></i>。它通常被称为钟型曲线，如图4所示：</p>
+<p><img src="/media/image3.png">{width&#x3D;“5.104166666666667in” height&#x3D;“4.25in”}</p>
+<p>图4：正态分布曲线</p>
+<p>这意味着中间的值比两端的值更有可能出现。正态分布为许多自然事件发生概率的分布提供了良好的近似形式。例如，随机抽取一些成年男性的身高分布大致就是符合正态分布的。</p>
+<p>当涉及大样本时，正态分布也经常作为样本统计量（如第二章中描述的描述性统计）分布形式的良好模型。例如，假如我们反复从某个分布中随机抽取一些样本，并且计算各个样本的平均值。由于每个样本都不同，我们对每个均值的期望也不同。也就是说，我们会得到一个均值的分布。如果样本足够大，那么这个均值分布大体上也符合正态分布。</p>
+<p>在第二章中，我强调统计学不仅是一系列互相独立的工具，而是一种互相联系的语言（Statistics was not simply a collection of isolated tools, but was a connected language.）。类似的观点也适用于概率分布。虽然我在上文中逐项介绍了这些分布，但事实是，伯努利分布可以看作是二项分布的特例（当只有两种可能的结果时它就是二项分布）。同样地，虽然本书不打算在这一点上做数学推导，但泊松分布是二项分布的一种极端情况，泊松分布和指数分布则形成了一对自然配对，随着事件数的增加，二项分布越来越类似于正态分布等。它们实际上都是整合在一起的数学分支。</p>
+<p>我以上描述的分布是通过说它们具有不同的形状来介绍的。实际上，可以很简单地介绍一下这些形状。我们看到，伯努利分布是由p值所特征化的。这告诉我们得到特定结果的概率。不同的p值对应不同的伯努利分布。我们可以将硬币投掷结果建模程成一个概率p&#x3D;1&#x2F;2的伯努利分布，并将单次旅行中出现车祸的概率建模为一个概率p值很小的伯努利分布（我希望如此！）。在这种情况下，p被称为参数。</p>
+<p>其他分布也是由参数来特征化的，起到告诉我们我们正在谈论哪个分布族中的成员的作用。为了理解这点，让我们后撤一步，回顾一下大数定律。它说，如果我们反复独立观察一个事件，该事件具有发生结果A的概率p和发生结果B的概率1-p，那么我们应该期望A结果出现的比例随着我们的观察次数而越来越接近p。这个属性有很重要的推广。尤其假设我们观察到的结果事件不只有两种可能，而是可以从一个值域中分布中取任一值；例如，可能是区间 [0, 1]中的任何值。假设我们不断地从这样的分布中取n组测量值，那么大数定律也会告诉我们，随着n的增大，我们应该期望n个测量值的平均值会逐步接近某个固定值。事实上，我们可以想象n无限制地增加，在这种情况下讨论从分布中抽取的无限制样本的平均值甚至分布本身的平均值都是有意义的。例如，使用这个想法，我们不仅可以讨论「从指数分布中抽取的样本」的平均值，还可以谈论指数分布本身的平均值。正如不同的伯努利分布有不同的参数p一样，不同的指数分布有不同的均值。因此，均值是指数分布的一个参数。</p>
+<p>在之前的例子中，我们看到指数分布是玻璃花瓶「寿命」的一个合理模型（在某些情况下）。现在我们可以想象有两个这样的花瓶种群：一个是由非常厚的玻璃制成的坚固花瓶组成，另一个是由薄如纸皮的玻璃制成的精致花瓶组成。显然，平均而言，前一种群的玻璃比后一种群的玻璃能存活的更久。因而这两类花瓶有不同的参数。</p>
+<p>我们可以用类似的方式来定义其他分布的参数：我们想象一下从分布中抽取无限量的样本，并总结计算统计量。例如，我们可以从正态分布的成员中抽取无限量的样本，并计算平均值。然而，这里情况稍微复杂一点，因为这个分布族的成员不是由单一参数决定的。它们需要两个参数。事实上，正态分布的平均值和标准差就足以帮助我们确定要讨论哪个分布族的成员。</p>
+<p>大数定律已经被进一步完善。想象从某个分布中抽取许多大小为n的值集，并为每个集合计算其平均值。然后，计算出的平均值本身是一个样本，来自这个分布：样本大小为n的平均值的可能值的分布。中心极限定理（the Central Limit Theorem）告诉我们，这些平均值的分布本身近似正态分布，并且随着n值的增大，近似程度越来越好。事实上，更重要的是，它还告诉我们，这个平均数分布的均值与总体的均值相同，而平均数分布的方差只是总体分布方差的1&#x2F;n倍。这在统计学中非常有用，因为它意味着我们可以通过采取足够大的样本（采样n足够大），来精确地估计总体均值，中心极限定理也告诉我们需要采取多大的样本才能获得高概率的准确性（译者注：即对均值的估计非常接近于真实均值的概率很高）。一般来说，我们可以通过采取更大的样本，来获得更好的估计结果，这是一个非常强大的原则。在第三章中我们看到了这个想法在实践中的另一应用，即抽样调查。</p>
+<p>这里还有另一个例子。在天文学中，远处的物体很微弱，观测往往受到信号随机波动的影响。然而，如果我们对同一个物体进行多次拍摄并叠加，这就好像我们对同一件事情 进行了多次测量，每个测量都来自同一分布但引入了额外的随机变量。上述概率法则就意味着随机下被平均掉了，留下了基础信号——天文物体的清晰视图。</p>
+</div>
+
+</article>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://carlshun.github.io">H. J. Hsü</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://carlshun.github.io/2023/07/30/Statistics%20(OUPSIntro4)/">https://carlshun.github.io/2023/07/30/Statistics%20(OUPSIntro4)/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://carlshun.github.io" target="_blank">LET'S Community</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/">统计学</a><a class="post-meta__tags" href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/">方法论</a></div><div class="post_share"><div class="social-share" data-image="https://pic.imgdb.cn/item/66cebbefd9c307b7e93f0fb6.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/30/Statistics%20(OUPSIntro5)/" title="牛津通识·统计学｜估计和推断"><img class="cover" src="https://pic.imgdb.cn/item/66cebb86d9c307b7e93eb7a6.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">牛津通识·统计学｜估计和推断</div></div></a></div><div class="next-post pull-right"><a href="/2023/07/30/Statistics%20(OUPSIntro3)/" title="牛津通识·统计学｜小心你的数据"><img class="cover" src="https://pic.imgdb.cn/item/66cebb86d9c307b7e93eb897.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">牛津通识·统计学｜小心你的数据</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/07/30/Statistics%20(OUPSIntro1)/" title="牛津通识·统计学｜无处不在的统计学"><img class="cover" src="https://pic.imgdb.cn/item/66ceba64d9c307b7e93dd938.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜无处不在的统计学</div></div></a></div><div><a href="/2023/07/30/Statistics%20(OUPSIntro3)/" title="牛津通识·统计学｜小心你的数据"><img class="cover" src="https://pic.imgdb.cn/item/66cebb86d9c307b7e93eb897.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜小心你的数据</div></div></a></div><div><a href="/2023/07/30/Statistics%20(OUPSIntro6)/" title="牛津通识·统计学｜统计模型与方法"><img class="cover" src="https://pic.imgdb.cn/item/66ceba5fd9c307b7e93dd652.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜统计模型与方法</div></div></a></div><div><a href="/2023/07/30/Statistics%20(OUPSIntro2)/" title="牛津通识·统计学｜简单的描述统计"><img class="cover" src="https://s11.ax1x.com/2024/01/28/pFutE11.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜简单的描述统计</div></div></a></div><div><a href="/2023/07/30/Statistics%20(OUPSIntro7)/" title="牛津通识·统计学｜计算机时代的统计学"><img class="cover" src="https://pic.imgdb.cn/item/66ceba60d9c307b7e93dd728.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜计算机时代的统计学</div></div></a></div><div><a href="/2023/07/30/Statistics%20(OUPSIntro5)/" title="牛津通识·统计学｜估计和推断"><img class="cover" src="https://pic.imgdb.cn/item/66cebb86d9c307b7e93eb7a6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">牛津通识·统计学｜估计和推断</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic.imgdb.cn/item/66557df0d9c307b7e98bbf67.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">H. J. Hsü</div><div class="author-info__description">Law, Economics, Technology and Sociology (LET'S)</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" href="mailto:jwptysjh@outlook.com"><i class="fas fa-envelope"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">算来平生无长物，聊以诗文待君顾。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E9%81%87%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-number">1.</span> <span class="toc-text">机遇的本质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%86%E8%A7%A3%E6%A6%82%E7%8E%87"><span class="toc-number">2.</span> <span class="toc-text">理解概率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E7%8E%87%E7%9A%84%E6%B3%95%E5%88%99"><span class="toc-number">3.</span> <span class="toc-text">概率的法则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83"><span class="toc-number">4.</span> <span class="toc-text">随机变量及其分布</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/14/ComputationalLaw/" title="计算思维与法学的“视域融合”"><img src="https://pic.imgdb.cn/item/66bde77cd9c307b7e97ad039.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算思维与法学的“视域融合”"/></a><div class="content"><a class="title" href="/2024/08/14/ComputationalLaw/" title="计算思维与法学的“视域融合”">计算思维与法学的“视域融合”</a><time datetime="2024-08-14T12:22:10.000Z" title="发表于 2024-08-14 20:22:10">2024-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/30/Images%20in%20Sociology%20of%20Law/" title="以图看法：法社会学中的「图像」研究"><img src="https://s11.ax1x.com/2024/02/01/pFMBJRU.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="以图看法：法社会学中的「图像」研究"/></a><div class="content"><a class="title" href="/2024/07/30/Images%20in%20Sociology%20of%20Law/" title="以图看法：法社会学中的「图像」研究">以图看法：法社会学中的「图像」研究</a><time datetime="2024-07-30T11:00:10.000Z" title="发表于 2024-07-30 19:00:10">2024-07-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/20/Gadamer-hermeneutics-1/" title="读《诠释学》（一）"><img src="https://pic.imgdb.cn/item/661cc51268eb93571375cf94.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="读《诠释学》（一）"/></a><div class="content"><a class="title" href="/2024/07/20/Gadamer-hermeneutics-1/" title="读《诠释学》（一）">读《诠释学》（一）</a><time datetime="2024-07-20T11:00:10.000Z" title="发表于 2024-07-20 19:00:10">2024-07-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/30/Statistics%20(OUPSIntro7)/" title="牛津通识·统计学｜计算机时代的统计学"><img src="https://pic.imgdb.cn/item/66ceba60d9c307b7e93dd728.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="牛津通识·统计学｜计算机时代的统计学"/></a><div class="content"><a class="title" href="/2023/07/30/Statistics%20(OUPSIntro7)/" title="牛津通识·统计学｜计算机时代的统计学">牛津通识·统计学｜计算机时代的统计学</a><time datetime="2023-07-30T11:56:10.000Z" title="发表于 2023-07-30 19:56:10">2023-07-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/30/Statistics%20(OUPSIntro6)/" title="牛津通识·统计学｜统计模型与方法"><img src="https://pic.imgdb.cn/item/66ceba5fd9c307b7e93dd652.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="牛津通识·统计学｜统计模型与方法"/></a><div class="content"><a class="title" href="/2023/07/30/Statistics%20(OUPSIntro6)/" title="牛津通识·统计学｜统计模型与方法">牛津通识·统计学｜统计模型与方法</a><time datetime="2023-07-30T11:55:10.000Z" title="发表于 2023-07-30 19:55:10">2023-07-30</time></div></div></div></div></div></div></main><footer id="footer" style="background: #000000"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By H. J. Hsü</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container').forEach(node => {
+            if (node.hasAttribute('display')) {
+              btf.wrap(node, 'div', { class: 'mathjax-overflow' })
+            } else {
+              btf.wrap(node, 'span', { class: 'mathjax-overflow' })
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script></div><canvas id="universe"></canvas><script src="/js/universe.js"></script><script src="/js/scripts.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
