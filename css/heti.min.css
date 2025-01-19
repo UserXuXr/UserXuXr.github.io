@@ -189,7 +189,7 @@
  }
 
  .heti {
-   max-width: 42em;                      /* 最大宽度为 42em */
+   max-width: 43em;                      /* 最大宽度为 42em */
    font-size: 16px;                       /* 字体大小为 16像素 */
    font-weight: 400;                      /* 字体粗细为普通（400） */
    -webkit-font-smoothing: subpixel-antialiased;  /* 使用亚像素抗锯齿 */
@@ -198,6 +198,7 @@
    word-wrap: break-word;                 /* 单词溢出时自动换行 */
    hyphens: auto;                         /* 自动断字 */
    letter-spacing: 0.02em;                /* 字符间距为 0.02em */
+   margin-left: 4%;
  }
 
  .heti::before,
@@ -223,8 +224,8 @@
  .heti blockquote {
    margin-block-start: 12px;       /* 引用块顶部的外边距为 12 像素 */
    margin-block-end: 24px;         /* 引用块底部的外边距为 24 像素 */
-   margin-inline-start: 32px;      /* 引用块左侧的外边距为 32 像素 */
-   margin-inline-end: 32px;        /* 引用块右侧的外边距为 32 像素 */
+   margin-inline-start: 22px;      /* 引用块左侧的外边距为 32 像素 */
+   margin-inline-end: 22px;        /* 引用块右侧的外边距为 32 像素 */
    padding-block-start: 12px;      /* 引用块顶部的内边距为 12 像素 */
    padding-block-end: 12px;        /* 引用块底部的内边距为 12 像素 */
    padding-inline-start: 16px;     /* 引用块左侧的内边距为 16 像素 */
@@ -347,13 +348,13 @@
  }
  .heti h5 {
    font-size:16px;
- line-height:24px;}
+   line-height:24px;}
  .heti h6 {
- font-size:14px;line-height:24px;}
+   font-size:14px;
+   line-height:24px;}
  .heti h1, .heti h2, .heti h3 {
-  letter-spacing: 0.05em;   /* 设置标题 h1、h2、h3 的字母间距为 0.05em */
+   letter-spacing: 0.05em;   /* 设置标题 h1、h2、h3 的字母间距为 0.05em */
  }
-
  .heti h1:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
  .heti h1:not(:lang(zh)),
  .heti h2:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
