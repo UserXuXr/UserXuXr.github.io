@@ -1372,9 +1372,9 @@ body {
   position: relative;
   min-height: 100%;
   background: var(--global-bg);
-  color: var(--font-color);
+  color: rgba(255,255,255,0.9);
   font-size: var(--global-font-size);
-  font-family: OldSong;
+  font-family: KingHwa_OldSong;
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -4263,6 +4263,21 @@ h1.page-title + .tag-cloud-list {
   #rightside #hide-aside-btn {
     display: none;
   }
+}
+#rightside #go-up .scroll-percent {
+  display: none;
+}
+#rightside #go-up.show-percent .scroll-percent {
+  display: block;
+}
+#rightside #go-up.show-percent .scroll-percent + i {
+  display: none;
+}
+#rightside #go-up:hover .scroll-percent {
+  display: none;
+}
+#rightside #go-up:hover .scroll-percent + i {
+  display: block;
 }
 #sidebar #menu-mask {
   position: fixed;

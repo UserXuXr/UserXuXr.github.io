@@ -92,12 +92,12 @@
 
 /* tags样式 */
 #aside-content .card-tag-cloud a {
-  color: var(--anzhiyu-fontcolor) !important;
+  color: var(--anzhiyu-white) !important;
   font-size: 1.05rem !important;
   border-radius: 8px;
   display: inline-block;
   margin-right: 4px;
-  font-family: 'OldSong' !important;
+  font-family: 'KingHwa_OldSong' !important;
 }
 #aside-content .card-tag-cloud a:hover {
   background: var(--anzhiyu-theme);
@@ -117,18 +117,6 @@
   margin-left: 2px;
 }
 
-.card-announcement {
-  color: black; /* 默认颜色 */
-}
-
-.card-announcement.dark-mode {
-  color: white; /* 暗模式下的颜色 */
-}
-
-.card-announcement.dark-mode .item-headline i,
-.card-announcement.dark-mode .item-headline span {
-  color: white; /* 使图标和文本在暗模式下为白色 */
-}
 
 /* 归档样式 */
 span.card-archive-list-count {
@@ -137,6 +125,7 @@ span.card-archive-list-count {
   font-size: 1.5rem;
   line-height: 0.9;
   font-weight: 700;
+  color: var(--anzhiyu-white);
 }
 .card-archive-list-count-group {
   display: flex;
@@ -147,6 +136,7 @@ span.card-archive-list-count {
 #aside-content .card-categories ul.card-category-list > .card-category-list-item a span:last-child {
   width: fit-content;
   margin-left: 4px;
+  color: var(--anzhiyu-white);
 }
 span.card-archive-list-count {
   width: auto;
@@ -154,10 +144,12 @@ span.card-archive-list-count {
   font-size: 1.1rem;
   line-height: 0.9;
   font-weight: 700;
+  color: var(--anzhiyu-white);
 }
 .card-archive-list-date {
   font-size: 14px;
   opacity: 0.6;
+  color: var(--anzhiyu-white);
 }
 li.card-archive-list-item {
   width: 100%;
@@ -204,6 +196,8 @@ li.card-archive-list-item {
   flex-wrap: wrap;
 }
 
+/* 侧边栏卡片背景色渐变 */
+
 #aside-content > .card-widget.card-info {
   background: linear-gradient(to bottom right, #888888, #4b4b4b, #1a1a1a);
   background-size: 400%;
@@ -211,13 +205,28 @@ li.card-archive-list-item {
   animation: gradient 15s ease infinite;
   position: relative;
   color: var(--anzhiyu-white);
-  font-family: Times;
+  font-family: 'KingHwa_OldSong';
 }
 .site-data > a .headline,
 .site-data > a .length-num {
   color: var(--anzhiyu-white);
 }
 
+#aside-content > .card-widget.card-announcement {
+  background: linear-gradient(to bottom right, #888888, #4b4b4b, #1a1a1a);
+  color: var(--anzhiyu-white);
+}
+
+#aside-content .card-tags {
+  background: linear-gradient(to bottom right, #888888, #4b4b4b, #1a1a1a);
+  color: var(--anzhiyu-white);
+}
+
+
+#aside-content .card-archives {
+  background: linear-gradient(to bottom right, #888888, #4b4b4b, #1a1a1a);
+  color: var(--anzhiyu-white)!important;
+}
 
 #nav *::after{
   background-color: transparent!important;
